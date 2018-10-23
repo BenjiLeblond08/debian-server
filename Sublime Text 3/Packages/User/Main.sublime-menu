@@ -1,0 +1,45 @@
+[
+	{
+		"caption": "|",
+		"id": "1",
+	},
+
+	{
+		"caption": "nebjix",
+		"id": "2",
+		"children":
+		[
+			{
+				"caption": "Hyper JS Settings",
+				"command": "open_file", 
+				"args": {"file": "$packages/../../../../.hyper.js"}
+			},
+			{
+				"caption": "HOSTS File",
+				"command": "open_file", 
+				"args": {"file": "C:/Windows/System32/drivers/etc/hosts"}
+			},
+			{
+				"caption": "User Dir",
+				"command": "open_dir", 
+				"args": {"dir": "$packages/../../../../"},
+			},
+			{
+				"caption": "Documents (Local)",
+				"command": "open_dir", 
+				"args": {"dir": "$packages/../../../../Documents"},
+			},
+			{
+				"caption": "Documents (OneDrive)",
+				"command": "open_dir", 
+				"args": {"dir": "$packages/../../../../OneDrive/Documents"},
+			},
+			{ "caption": "-" },
+			{
+				"caption": "Edit this menu",
+				"command": "open_file", 
+				"args": {"file": "Main.sublime-menu"}
+			},
+		],
+	},
+]

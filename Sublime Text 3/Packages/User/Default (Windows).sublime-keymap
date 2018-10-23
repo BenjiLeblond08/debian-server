@@ -1,0 +1,27 @@
+[
+	{ "keys": ["ctrl+n"], "command": "advanced_new_file_new" },
+	{ "keys": ["alt+n"], "command": "new_file" },
+
+	{ "keys": ["alt+c"], "command": "show_overlay", "args": {"overlay": "command_palette"} },
+	{ "keys": ["alt+g"], "command": "show_overlay", "args": {"overlay": "goto"} },
+	{ "keys": ["alt+d"], "command": "file_diff_tab" },
+	{ "keys": ["alt+x"], "command": "show_overlay", "args": {"overlay": "goto", "show_files": true} },
+	{ "keys": ["alt+f"], "command": "show_panel", "args": {"panel": "incremental_find", "reverse": false} },
+	{ "keys": ["alt+shift+f"], "command": "show_panel", "args": {"panel": "incremental_find", "reverse": true} },
+	
+	{ "keys": ["alt+f", "alt+a"], "command": "find_all_under", 
+		"context": [{"key": "selection_empty", "operator": "equal", "operand": false, "match_all": true}]
+	},
+	{ "keys": ["alt+f", "alt+g"], "command": "open_browser", "args": {"url" : "http://google.fr/search?q=%s"}, 
+		"context": [{"key": "selection_empty", "operator": "equal", "operand": false, "match_all": true}]
+	},
+	{ "keys": ["alt+f", "alt+p"], "command": "open_browser", "args": {"url" : "http://php.net/manual-lookup.php?pattern=%s"}, 
+		"context": [{"key": "selection_empty", "operator": "equal", "operand": false, "match_all": true}]
+	},
+	{ "keys": ["ctrl+alt+c", "ctrl+alt+u"], "command": "upper_case", 
+		"context": [{"key": "selection_empty", "operator": "equal", "operand": false, "match_all": true}]
+	},
+	{ "keys": ["ctrl+alt+c", "ctrl+alt+l"], "command": "lower_case", 
+		"context": [{"key": "selection_empty", "operator": "equal", "operand": false, "match_all": true}]
+	},
+]

@@ -1,0 +1,33 @@
+{
+	"bootstrapped": true,
+	"in_process_packages":
+	[
+	],
+	"installed_packages":
+	[
+		"42 Headers",
+		"AdvancedNewFile",
+		"Alignment",
+		"BracketFlasher",
+		"BracketHighlighter",
+		"C++ Snippets",
+		"C++ Starting Kit",
+		"Case Conversion",
+		"ExportHtml",
+		"FileDiffs",
+		"Git",
+		"Github Tools",
+		"Gitignore",
+		"HexViewer",
+		"Language - French - Français",
+		"MarkdownPreview",
+		"Package Control",
+		"SideBarEnhancements",
+		"Text Pastry",
+		"Theme - Nexus",
+		"VBDotNet"
+	],
+	"repositories":
+	[
+	]
+}

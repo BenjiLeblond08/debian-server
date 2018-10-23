@@ -1,0 +1,37 @@
+{
+	"bold_folder_labels": false,
+	"color_scheme": "Packages/User/Sunburst.tmTheme",
+	"detect_slow_plugins": true,
+	"dictionary": "Packages/Language - French - Français/fr_FR (all variants).dic",
+	"draw_minimap_border": false,
+	"enable_tab_scrolling": false,
+	"expand_tabs": true,
+	"figlet_font": "basic",
+	"file_exclude_patterns":
+	[
+	],
+	"folder_exclude_patterns":
+	[
+		".svn",
+		".git",
+		".hg",
+		"CVS",
+		".sass-cache",
+		"tmp",
+		".old"
+	],
+	"font_size": 14,
+	"ignored_packages":
+	[
+		"Vintage"
+	],
+	"line_padding_bottom": 0,
+	"line_padding_top": 0,
+	"open_files_in_new_window": false,
+	"save_on_focus_lost": true,
+	"tab_size": 4,
+	"theme": "Nexus.sublime-theme",
+	"translate_tabs_to_spaces": false,
+	"use_tab_stops": true,
+	"word_wrap": false
+}
