@@ -9,7 +9,7 @@ module.exports = {
 		updateChannel: 'stable',
 
 		// default font size in pixels for all tabs
-		fontSize: 12,
+		fontSize: 14,
 
 		// font family with optional fallbacks
 		fontFamily: 'Menlo, "DejaVu Sans Mono", Consolas, "Lucida Console", monospace',
@@ -30,7 +30,7 @@ module.exports = {
 		cursorShape: 'BLOCK',
 
 		// set to `true` (without backticks and without quotes) for blinking cursor
-		cursorBlink: false,
+		cursorBlink: true,
 
 		// color of the text
 		foregroundColor: '#fff',
@@ -98,21 +98,26 @@ module.exports = {
 		// PowerShell on Windows
 		// - Example: `C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe`
 		// shell: 'C:\\Windows\\System32\\bash.exe',
-		shell: 'C:\\Windows\\System32\\cmd.exe',
+		// shell: 'C:\\Windows\\System32\\cmd.exe',
+		shell: 'C:\\Windows\\System32\\wsl.exe',
 
 		// for setting shell arguments (i.e. for using interactive shellArgs: `['-i']`)
 		// by default `['--login']` will be used
 		// shellArgs: ['--login'],
-		shellArgs: ['/k', 'C:\\cmder\\vendor\\init.bat'],
+		// shellArgs: ['/k', 'C:\\cmder\\vendor\\init.bat'],
+		shellArgs: [],
 
 		// for environment variables
 		env: {},
+
+		// The default width/height in pixels of a new window
+		windowSize: [958, 523],
 
 		// set to `false` for no bell
 		bell: false,
 
 		// if `true` (without backticks and without quotes), selected text will automatically be copied to the clipboard
-		copyOnSelect: false,
+		copyOnSelect: true,
 
 		// if `true` (without backticks and without quotes), hyper will be set as the default protocol client for SSH
 		defaultSSHApp: true,
@@ -125,6 +130,24 @@ module.exports = {
 		// bellSoundURL: 'http://example.com/bell.mp3',
 
 		// for advanced config flags please refer to https://hyper.is/#cfg
+		broadcast: {
+			debug: false,
+			hotkeys: {
+				selectCurrentPane: "Ctrl+Alt+C",
+				selectCurrentTabPanes: "Ctrl+Alt+B",
+				selectAllPanes: "Ctrl+Alt+Shift+B",
+				toggleCurrentPane: "Ctrl+Alt+B"
+			},
+			indicatorStyle: {
+				position: "absolute",
+				top: 5,
+				right: 10,
+				borderRadius: "50%",
+				width: "10px",
+				height: "10px",
+				background: "red"
+			}
+		}
 	},
 
 	// a list of plugins to fetch and install from npm
@@ -136,16 +159,14 @@ module.exports = {
 	plugins: [
 		// "hyper-dracula",
 		// "hyper-solarized-dark",
-		// "hyper-material-theme", 
-		// "hyper-keymap", 
-		// "hyperterm-monokai", 
-		// "hypergravity", 
-		// "hyper-transparent", 
-		// "hyper-clean"
+		// "hyper-material-theme",
+		// "hyper-pane", // Bug chractères spéciaux
 		"hyper-monokai",
-		"hyper-pane",
 		"hyper-tab-icons",
 		"hyper-statusline",
+		"hyper-broadcast",
+		"hyper-search",
+		"hyper-savetext",
 	],
 
 
@@ -156,12 +177,14 @@ module.exports = {
 
 	keymaps: {
 		// Example
-		// 'window:devtools': 'cmd+alt+o',
-		// 'split-vertical': 'Ctrl+d',
-	},
-	keymap: {
-		// Example
-		// 'window:devtools': 'cmd+alt+o',
-		// 'split-vertical': 'Ctrl+d',
+		// 'window:devtools': 'cmd+Alt+o',
+		// Default Keymaps : https://github.com/zeit/hyper/blob/master/app/keymaps/win32.json
+		// "pane:splitVertical": "Ctrl+Shift+D",
+		// "pane:splitHorizontal": "Ctrl+Shift+E",
+		"pane:next": "Ctrl+Alt+Right",
+		"pane:prev": "Ctrl+Alt+Left",
+		"tab:new": "Ctrl+Shift+T",
+		"tab:next": "Ctrl+Tab",
+		"tab:prev": "Ctrl+Shift+Tab",
 	},
 };
