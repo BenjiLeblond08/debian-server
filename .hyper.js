@@ -12,7 +12,7 @@ module.exports = {
 		fontSize: 14,
 
 		// font family with optional fallbacks
-		fontFamily: 'Menlo, "DejaVu Sans Mono", Consolas, "Lucida Console", monospace',
+		fontFamily: 'Consolas, Menlo, "DejaVu Sans Mono", "Lucida Console", monospace',
 
 		// default font weight: 'normal' or 'bold'
 		fontWeight: 'normal',
@@ -111,7 +111,7 @@ module.exports = {
 		env: {},
 
 		// The default width/height in pixels of a new window
-		windowSize: [958, 523],
+		windowSize: [960, 525],
 
 		// set to `false` for no bell
 		bell: false,
