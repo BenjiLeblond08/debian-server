@@ -14,7 +14,9 @@
 			<key>settings</key>
 			<dict>
 				<key>background</key>
-				<string>#111111</string>
+				<!-- <string>#111111</string> -->
+				<!-- Monokai -->
+				<string>#272824</string>
 				<!-- <string>#262626</string> -->
 				<key>caret</key>
 				<string>#A7A7A7</string>
