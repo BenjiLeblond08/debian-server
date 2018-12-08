@@ -1,5 +1,5 @@
 {
-	"bold_folder_labels": false,
+	"bold_folder_labels": true,
 	"color_scheme": "Packages/User/Sunburst.tmTheme",
 	"detect_slow_plugins": true,
 	"dictionary": "Packages/Language - French - Français/fr_FR (all variants).dic",
