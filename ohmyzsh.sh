@@ -18,3 +18,4 @@ mv nebjix.zsh-theme ~/.oh-my-zsh/custom/themes/
 sed -i 's/^ZSH_THEME=.*$/ZSH_THEME="nebjix"/' ~/.zshrc
 echo clear >> ~/.zshrc
 echo screenfetch >> ~/.zshrc
+chsh -s /bin/zsh
