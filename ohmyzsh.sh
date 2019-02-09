@@ -1,10 +1,8 @@
 #!/bin/bash
-##
-## Install and configure Oh-My-ZSH
-## 
-## Author: Benjamin LEBLOND <benjamin.leblond@orange.fr>
-## nebjix.free.fr
-## github.com/benjiLeblond08
+# 
+# Install and configure Oh-My-ZSH
+# 
+# Author: Benjamin LEBLOND <benjamin.leblond@orange.fr>
 
 if [[ $EUID -eq 0 ]]; then
 	echo "You must NOT run this script as ROOT" 2>&1
