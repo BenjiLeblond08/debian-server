@@ -38,7 +38,7 @@
 			{
 				"caption": "Edit this menu",
 				"command": "open_file", 
-				"args": {"file": "Main.sublime-menu"}
+				"args": {"file": "$packages/User/Main.sublime-menu"}
 			},
 		],
 	},
