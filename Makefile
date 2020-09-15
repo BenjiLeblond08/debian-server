@@ -1,4 +1,4 @@
-.PHONY: install config omz wsl sublime-text
+.PHONY: install dotfiles clean-dofiles omz wsl sublime-text windows-terminal
 
 configs=$(subst ./config/,,$(wildcard ./config/*))
 
@@ -7,14 +7,25 @@ install:
 	sudo apt-get upgrade -y
 	sudo apt-get install -y $(shell grep -vE "^\s*#" package.list | tr "\n" " ")
 
-config:
-	for dir in $(configs) ; do \
-		cd ./config && stow -v -t ~ $$dir
+dotfiles:
+	@for dir in ./dotfiles/*/ ; do \
+		dir=$$(basename $${dir}); \
+		echo $${dir}; \
+		stow -v -d ./dotfiles -t ~ $${dir}; \
 	done
 
-omz:
+clean-dofiles:
+	@for dir in ./dotfiles/*/; do \
+		for file in $$(find $${dir} -type f -print | sed "s|$${dir}||"); do \
+			if [ -e ~/$${file} ]; then \
+				rm ~/$${file}; \
+			fi; \
+		done; \
+	done
+
+oh-my-zsh:
 	sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-	cd config && stow -v -t ~ omz
+	stow -v -d ./dotfiles -t ~ oh-my-zsh
 
 wsl:
 	cd ~ && ln -s "$(shell wslpath "$(shell wslvar USERPROFILE)")" "$(shell wslvar USERNAME)"
@@ -24,4 +35,7 @@ wsl:
 	cd ~ && ln -s "$(shell wslpath "$(shell wslvar -l {374DE290-123F-4565-9164-39C4925E467B})")" "Downloads"
 
 sublime-text:
-	cp -a -u "Sublime Text 3" "$(shell wslpath "$(shell wslvar AppData)")"
+	cp -a -u "Sublime Text 3" "$(shell wslpath "$(shell wslvar APPDATA)")"
+
+windows-terminal:
+	cp -a -u WindowsTerminal/* "$(shell wslpath "$(shell wslvar LOCALAPPDATA)")/Packages/Microsoft.WindowsTerminal_8wekyb3d8bbwe/LocalState"
