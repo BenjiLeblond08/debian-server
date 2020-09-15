@@ -1,0 +1,51 @@
+" Extended vimrc file
+"
+" Maintainer:   JuliaLblnd
+" Last change:  2020 Sep 15
+
+" Install vim-plug Plugins Manager
+if empty(glob('~/.vim/autoload/plug.vim'))
+  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
+
+call plug#begin('~/.vim/plugged')
+
+"Plug 'ctrlpvim/ctrlp.vim'
+"Plug 'chr4/nginx.vim'
+Plug 'itchyny/lightline.vim'
+Plug 'airblade/vim-gitgutter'
+Plug 'arcticicestudio/nord-vim'
+
+call plug#end()
+
+" Theme
+try
+    colorscheme nord
+catch /^Vim\%((\a\+)\)\=:E185/
+    " deal with it
+endtry
+let g:lightline = {'colorscheme': 'nord'}
+
+" Buffer
+nnoremap gb :ls<CR>:b<Space>
+
+" Finder
+set path=.,**
+nnoremap <leader>f :find *
+nnoremap <leader>s :sfind *
+nnoremap <leader>v :vert sfind *
+nnoremap <leader>t :tabfind *
+
+" CtrlP
+let g:ctrlp_show_hidden = 1
+
+" Wildmenu
+set wildmode=list:full
+set wildignorecase
+set wildignore=*.swp,*.bak
+set wildignore+=*.pyc,*.class,*.sln,*.Master,*.csproj,*.csproj.user,*.cache,*.dll,*.pdb,*.min.*
+set wildignore+=*/.git/**/*,*/.hg/**/*,*/.svn/**/*,*/node_modules/**/*
+set wildignore+=tags
+set wildignore+=*.tar.*

@@ -1,0 +1,13 @@
+[user]
+	email = julia.lblnd@free.fr
+	name = Julia Leblond
+
+[credential]
+	helper = cache
+
+;[credential "https://gitlab.infra.renater.fr"]
+;	username = leblond@renater.fr
+
+[credential "https://github.com/"]
+	username = JuliaLblnd
+
