@@ -2,7 +2,7 @@
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/home/julia/.oh-my-zsh"
+export ZSH="~/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -103,11 +103,12 @@ fi
 # For a full list of active aliases, run `alias`.
 #
 # Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
+alias zshconfig="mate ~/.zshrc"
+alias ohmyzsh="mate ~/.oh-my-zsh"
+alias bye="cd && exit && exit"
+alias back='cd $OLDPWD'
 alias e.="explorer.exe ."
+alias tracert='tracert.exe'
 alias subl="/mnt/c/Program\ Files/Sublime\ Text\ 3/sublime_text.exe"
 alias st="subl"
-alias back='cd $OLDPWD'
-alias tracert='tracert.exe'
 alias go='go.exe'
