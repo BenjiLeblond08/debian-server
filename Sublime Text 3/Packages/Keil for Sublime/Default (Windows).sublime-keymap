@@ -1,5 +1,0 @@
-[
-	{"keys": ["f7"], "command": "keil_compile"},
-	// {"keys": ["ctrl+alt+f"], "command": "keil_flash"},
-	// {"keys": ["ctrl+alt+c"],"command": "keil_clean"}
-]

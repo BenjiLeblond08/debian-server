@@ -1,6 +1,8 @@
 {
 	"bold_folder_labels": true,
-	"color_scheme": "Packages/User/Sunburst.tmTheme",
+	// "color_scheme": "Packages/User/Sunburst.tmTheme",
+	"color_scheme": "Packages/User/crubb.tmTheme",
+	"default_line_ending": "unix",
 	"detect_slow_plugins": true,
 	"dictionary": "Packages/Language - French - Français/fr_FR (all variants).dic",
 	"draw_minimap_border": false,
@@ -20,7 +22,7 @@
 		"tmp",
 		".old"
 	],
-	"font_size": 14,
+	"font_size": 16,
 	"ignored_packages":
 	[
 		"Vintage"

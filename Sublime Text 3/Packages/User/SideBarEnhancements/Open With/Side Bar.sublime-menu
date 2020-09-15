@@ -1,0 +1,73 @@
+[
+	{"id": "side-bar-files-open-with",
+		"children":
+		[
+
+			//application 1 (exemple)
+			/*
+			{
+				"caption": "Photoshop",
+				"id": "side-bar-files-open-with-photoshop",
+
+				"command": "side_bar_files_open_with",
+				"args": {
+									"paths": [],
+									"application": "Adobe Photoshop CS5.app", // OSX
+									"extensions":"psd|png|jpg|jpeg",  //any file with these extensions
+									"args":[]
+								},
+				"open_automatically" : false // will close the view/tab and launch the application
+			},
+			*/
+			// Arduino
+			{
+				"caption": "Arduino IDE",
+				"id": "side-bar-files-open-with-arduino-ide",
+
+				"command": "side_bar_files_open_with",
+				"args": {
+									"paths": [],
+									"application": "C:\\Program Files (x86)\\Arduino\\arduino.exe", // OSX
+									"extensions":".ino",  //any file with these extensions
+									"args":[]
+								},
+				"open_automatically" : false // will close the view/tab and launch the application
+			},
+
+			//Chrome
+			{
+				"caption": "Chrome",
+				"id": "side-bar-files-open-with-chrome",
+
+				"command": "side_bar_files_open_with",
+				"args": {
+									"paths": [],
+									"application": "C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe",
+									"extensions":".*htm*|.pdf",
+									"args":[]
+						},
+				"open_automatically" : false // will close the view/tab and launch the application
+			},
+
+			//application 2
+			/*
+			{
+				"caption": "SeaMonkey",
+				"id": "side-bar-files-open-with-seamonkey",
+
+				"command": "side_bar_files_open_with",
+				"args": {
+									"paths": [],
+									"application": "C:\\Archivos de programa\\SeaMonkey\\seamonkey.exe", // WINNT
+									"extensions":"", //open all even folders
+									"args":[]
+								},
+				"open_automatically" : false // will close the view/tab and launch the application
+			},
+			*/
+			
+			//separator
+			{"caption":"-"}
+		]
+	}
+]
