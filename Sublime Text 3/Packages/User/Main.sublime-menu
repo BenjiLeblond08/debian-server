@@ -1,12 +1,7 @@
 [
 	{
-		"caption": "|",
+		"caption": "JuliaLblnd",
 		"id": "1",
-	},
-
-	{
-		"caption": "nebjix",
-		"id": "2",
 		"children":
 		[
 			{
@@ -15,7 +10,7 @@
 				"args": {"file": "$packages/../../../../.hyper.js"}
 			},
 			{
-				"caption": "HOSTS File",
+				"caption": "hosts File",
 				"command": "open_file", 
 				"args": {"file": "C:/Windows/System32/drivers/etc/hosts"}
 			},
@@ -33,6 +28,11 @@
 				"caption": "Documents (OneDrive)",
 				"command": "open_dir", 
 				"args": {"dir": "$packages/../../../../OneDrive/Documents"},
+			},
+			{
+				"caption": "WSL Ubuntu Root",
+				"command": "open_dir", 
+				"args": {"dir": "//wsl$/Ubuntu/"},
 			},
 			{ "caption": "-" },
 			{
