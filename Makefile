@@ -1,4 +1,4 @@
-.PHONY: install dotfiles clean-dofiles omz wsl sublime-text windows-terminal
+.PHONY: install dotfiles-stow dotfiles-copy dotfiles-clean oh-my-zsh wsl sublime-text windows-terminal
 
 configs=$(subst ./config/,,$(wildcard ./config/*))
 
@@ -7,20 +7,46 @@ install:
 	sudo apt-get upgrade -y
 	sudo apt-get install -y $(shell grep -vE "^\s*#" package.list | tr "\n" " ")
 
-dotfiles:
+dotfiles-stow:
 	@for dir in ./dotfiles/*/ ; do \
-		dir=$$(basename $${dir}); \
-		echo $${dir}; \
-		stow -v -d ./dotfiles -t ~ $${dir}; \
+		dir=$$(basename $${dir});\
+		echo $${dir};\
+		stow -v -d ./dotfiles -t ~ $${dir};\
 	done
 
-clean-dofiles:
-	@for dir in ./dotfiles/*/; do \
-		for file in $$(find $${dir} -type f -print | sed "s|$${dir}||"); do \
+dotfiles-copy:
+	@IFS='\
+';\
+	for dir in ./dotfiles/*/; do \
+		files="$$(find $${dir} -type f -print | sed "s|$${dir}||")";\
+# 		echo "|- $${dir}";\
+		for file in $${files}; do \
+# 			echo "|  |-> $${file}";\
+			dest=~/"$${file}";\
+			dest_dir=$$(dirname "$${dest}");\
 			if [ -e ~/$${file} ]; then \
-				rm ~/$${file}; \
-			fi; \
-		done; \
+				echo "Skiping $${dest}";\
+				continue;\
+			fi;\
+			if [ ! -d "$${dest_dir}" ]; then \
+				echo "Creating $${dest_dir}";\
+				mkdir -p $${dest_dir};\
+			fi;\
+			echo "Copying $${dir}$${file} to $${dest}";\
+ 			cp "$${dir}$${file}" "$${dest}";\
+		done;\
+	done
+
+dofiles-clean:
+	@IFS='\
+';\
+	for dir in ./dotfiles/*/; do \
+		files="$$(find $${dir} -type f -print | sed "s|$${dir}||")";\
+		for file in $${files}; do \
+			if [ -e ~/$${file} ]; then \
+				rm ~/$${file};\
+			fi;\
+		done;\
 	done
 
 oh-my-zsh:
