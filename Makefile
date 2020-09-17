@@ -37,7 +37,7 @@ dotfiles-copy:
 		done;\
 	done
 
-dofiles-clean:
+dotfiles-clean:
 	@IFS='\
 ';\
 	for dir in ./dotfiles/*/; do \
