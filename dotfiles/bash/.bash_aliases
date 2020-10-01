@@ -13,6 +13,7 @@ alias zshconfig="mate ~/.zshrc"
 alias ohmyzsh="mate ~/.oh-my-zsh"
 alias bye="cd && exit && exit"
 alias back='cd $OLDPWD'
+alias e="explorer.exe"
 alias e.="explorer.exe ."
 alias tracert='tracert.exe'
 alias subl="/mnt/c/Program\ Files/Sublime\ Text\ 3/sublime_text.exe"
