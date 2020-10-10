@@ -1,4 +1,4 @@
-.PHONY: install dotfiles-stow dotfiles-copy dotfiles-clean oh-my-zsh wsl sublime-text windows-terminal
+.PHONY: install dotfiles-stow dotfiles-copy dotfiles-clean oh-my-zsh wsl sublime-text windows-terminal powershell
 
 configs=$(subst ./config/,,$(wildcard ./config/*))
 
@@ -65,3 +65,8 @@ sublime-text:
 
 windows-terminal:
 	cp -a -u WindowsTerminal/* "$(shell wslpath "$(shell wslvar LOCALAPPDATA)")/Packages/Microsoft.WindowsTerminal_8wekyb3d8bbwe/LocalState"
+
+powershell:
+	powershell.exe -Command "Install-Module posh-git -Scope CurrentUser; Install-Module oh-my-posh -Scope CurrentUser"
+	mkdir -p "$(shell wslpath "$(shell wslvar -l Personal)")/WindowsPowerShell"
+	cp -a -u WindowsPowerShell/* "$(shell wslpath "$(shell wslvar -l Personal)")/WindowsPowerShell"

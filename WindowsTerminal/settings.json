@@ -37,7 +37,10 @@
                 "name": "Windows PowerShell",
                 "commandline": "powershell.exe",
                 "startingDirectory" : ".",
-                "hidden": false
+                "hidden": false,
+                "colorScheme" : "Monokai",
+                "fontSize" : 13,
+                "padding" : "2, 0, 0, 0"
             },
             {
                 // Make changes here to the cmd.exe profile.
@@ -45,7 +48,16 @@
                 "name": "cmd",
                 "commandline": "cmd.exe",
                 "startingDirectory" : ".",
-                "hidden": false
+                "hidden": false,
+                "closeOnExit" : true,
+                "colorScheme" : "Retro",
+                "cursorColor" : "#00ff00",
+                "cursorShape": "filledBox",
+                "fontSize" : 14,
+                "padding" : "5, 5, 5, 5",
+                "tabTitle" : "Command Prompt",
+                "fontFace": "PxPlus IBM VGA8",
+                "experimental.retroTerminalEffect": true
             },
             {
                 "guid": "{b453ae62-4e3d-5e58-b989-0a998ec441b8}",
@@ -69,6 +81,27 @@
     // Add custom color schemes to this array.
     // To learn more about color schemes, visit https://aka.ms/terminal-color-schemes
     "schemes": [
+        {
+            "name": "Retro",
+            "background": "#000000",
+            "black": "#00ff00",
+            "blue": "#00ff00",
+            "brightBlack": "#00ff00",
+            "brightBlue": "#00ff00",
+            "brightCyan": "#00ff00",
+            "brightGreen": "#00ff00",
+            "brightPurple": "#00ff00",
+            "brightRed": "#00ff00",
+            "brightWhite": "#00ff00",
+            "brightYellow": "#00ff00",
+            "cyan": "#00ff00",
+            "foreground": "#00ff00",
+            "green": "#00ff00",
+            "purple": "#00ff00",
+            "red": "#00ff00",
+            "white": "#00ff00",
+            "yellow": "#00ff00"
+        },
         {
             "background" : "#272824",
             "black" : "#0C0C0C",
